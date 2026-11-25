@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".CartsFragment"
+    android:isScrollContainer="false"
+    android:windowSoftInputMode="adjustResize">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.yandex.mobile.ads.banner.BannerAdView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cart_name_input" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Корзины"
+            android:textSize="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartsList"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cart_name_input"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#000000"
+            android:hint="введите название"
+            android:textColor="#000000"
+            android:textColorHint="#777777"
+            android:textCursorDrawable="@drawable/black_cursor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cartsList" />
+
+        <Button
+            android:id="@+id/button_add_cart"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#44944A"
+            android:textColor="#00FFFFFF"
+            android:textColorHighlight="#00FFFFFF"
+            android:textColorHint="#00FFFFFF"
+            android:textColorLink="#00FFFFFF"
+            app:icon="@drawable/baseline_add_shopping_cart_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconTint="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/cart_name_input"
+            app:layout_constraintTop_toBottomOf="@+id/cartsList" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

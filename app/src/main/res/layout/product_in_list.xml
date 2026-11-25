@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/product_in_list_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+
+        android:text="Продукт1"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/category_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/category_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="60dp"
+        android:background="#FFFFFF"
+        android:src="@android:drawable/btn_star"
+        app:layout_constraintBottom_toTopOf="@+id/product_in_list_add_to_cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/product_in_list_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Цена: от x р."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/product_in_list_add_to_cart"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/product_in_list_logo"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="20dp"
+        tools:srcCompat="@tools:sample/avatars"
+        app:layout_constraintBottom_toTopOf="@+id/product_in_list_add_to_cart"
+        app:layout_constraintStart_toEndOf="@+id/product_in_list_cost" />
+
+    <TextView
+        android:id="@+id/product_in_list_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="45гр"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/product_in_list_add_to_cart"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/product_in_list_add_to_cart"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#44944A"
+        android:text="В корзину"
+
+
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/product_in_list_amount_shops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:text="3/4"
+        app:layout_constraintBottom_toTopOf="@+id/category_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_in_list_name" />
+</androidx.constraintlayout.widget.ConstraintLayout>
